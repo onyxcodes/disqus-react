@@ -1,11 +1,13 @@
-var path = require('path');
-
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'production',
     devtool: 'source-map',
     context: path.resolve(__dirname, '../'),
-    entry: ['webpack/hot/dev-server/', './examples/index.jsx'],
+    entry: [
+        './examples/index.jsx'
+    ],
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
@@ -17,6 +19,14 @@ module.exports = {
         filename: 'examples.bundle.js',
         publicPath: '/examples/js/',
     },
+    devServer: {
+        hot: true,
+        host: "localhost",
+        static: path.resolve('src'),
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(), // Enable HMR globally
+    ],
     module: {
         rules: [{
             test: /.jsx?$/,

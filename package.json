@@ -14,7 +14,7 @@
     "types"
   ],
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.examples.config.js --hot --progress",
+    "start": "webpack serve --config config/webpack.examples.config.js --hot --progress",
     "build:example": "webpack --config config/webpack.examples.config.js --progress",
     "build:dist": "webpack --config config/webpack.dist.config.js --progress && uglifyjs dist/index.js -cm -o dist/index.min.js --source-map content=dist/index.js.map,url=index.min.js.map",
     "build:babel": "babel src --out-dir lib",
