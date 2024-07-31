@@ -14,9 +14,9 @@
     "types"
   ],
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.examples.config.js --hot --progress --colors",
-    "build:example": "webpack --config config/webpack.examples.config.js --progress --colors",
-    "build:dist": "webpack --config config/webpack.dist.config.js --progress --colors && uglifyjs dist/index.js -cm -o dist/index.min.js --source-map content=dist/index.js.map,url=index.min.js.map",
+    "start": "webpack-dev-server --config config/webpack.examples.config.js --hot --progress",
+    "build:example": "webpack --config config/webpack.examples.config.js --progress",
+    "build:dist": "webpack --config config/webpack.dist.config.js --progress && uglifyjs dist/index.js -cm -o dist/index.min.js --source-map content=dist/index.js.map,url=index.min.js.map",
     "build:babel": "babel src --out-dir lib",
     "build": "npm run build:example && npm run build:dist && npm run build:babel",
     "lint": "eslint src/* tests/*",
@@ -27,30 +27,30 @@
   "author": "Ryan Valentin",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^15.6.1 || ^16.0.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^15.6.1 || ^16.0.0 || ^17.0.0 || ^18.0.0"
+    "react": "^15.6.1 || ^16.0.0 || ^17.0.0 || ^18.*.*",
+    "react-dom": "^15.6.1 || ^16.0.0 || ^17.0.0 || ^18.*.*"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
+    "@babel/core": "^7.25.2",
     "@babel/plugin-transform-spread": "^7.10.1",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-env": "^7.25.2",
     "@babel/preset-react": "^7.9.4",
     "@testing-library/jest-dom": "^5.0.0",
     "@testing-library/react": "^9.4.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.9.0",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.3.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^24.9.0",
     "prop-types": "^15.7.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "uglify-js": "^3.9.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "uglify-js": "^3.19.1",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -59,6 +59,5 @@
     "roots": [
       "src"
     ]
-  },
-  "dependencies": {}
+  }
 }
