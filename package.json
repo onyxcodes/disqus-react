@@ -30,6 +30,9 @@
     "react": "^15.6.1 || ^16.0.0 || ^17.0.0 || ^18.*.*",
     "react-dom": "^15.6.1 || ^16.0.0 || ^17.0.0 || ^18.*.*"
   },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.25.2",
@@ -44,7 +47,6 @@
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^24.9.0",
-    "prop-types": "^15.7.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "uglify-js": "^3.19.1",
